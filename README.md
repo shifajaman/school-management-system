@@ -26,3 +26,13 @@ A Spring Boot + PostgreSQL based web application for managing students and cours
 ## Author
 Shifa Banu
 
+## 📸 Screenshots
+
+### Home Page
+![Home](src/main/resources/static/images/home.png)
+
+### Course List
+![Courses](src/main/resources/static/images/course.png)
+
+### Add Student
+![Student](src/main/resources/static/images/student.png)
