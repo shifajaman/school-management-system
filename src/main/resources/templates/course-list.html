@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course List</title>
+</head>
+<body>
+<h2>Course List</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Course Name</th>
+        <th>Duration</th>
+        <th>Fees</th>
+    </tr>
+
+    <tr th:each="c : ${courses}">
+        <td th:text="${c.id}"></td>
+        <td th:text="${c.courseName}"></td>
+        <td th:text="${c.duration}"></td>
+        <td th:text="${c.fees}"></td>
+        <td>
+            <a th:href="@{/courses/delete/{id}(id=${c.id})}">
+                ❌ Delete
+            </a>
+            <a th:href="@{/courses/edit/{id}(id=${c.id})}">✏️ Edit</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

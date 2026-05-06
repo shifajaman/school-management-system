@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+</head>
+<body>
+
+<h2>Add Student</h2>
+
+<form th:action="@{/students/save}" method="post">
+
+    <input type="text" name="name" placeholder="Student Name" required/>
+    <input type="email" name="email" placeholder="Email" required/>
+    <input type="text" name="phone" placeholder="Phone" required/>
+
+    <select name="courseId" required>
+        <option value="">-- Select Course --</option>
+        <option th:each="c : ${courses}"
+                th:value="${c.id}"
+                th:text="${c.courseName}">
+        </option>
+    </select>
+
+    <button type="submit">Save Student</button>
+</form>
+</body>
+</html>
