@@ -27,13 +27,16 @@ public class StudentController {
     }
 
     @PostMapping("/save")
-    public String saveStudent(
-            @ModelAttribute Student student,
-            @RequestParam("courseId") Long courseId
-    ) {
-        Course course = courseRepository.findById(courseId).orElse(null);
+    public String saveStudent(@ModelAttribute Student student,
+                              @RequestParam Long courseId) {
+
+        Course course = courseRepository.findById(courseId)
+                .orElseThrow();
+
         student.setCourse(course);
+
         studentRepository.save(student);
+
         return "redirect:/students/list";
     }
 

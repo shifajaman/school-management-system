@@ -38,6 +38,10 @@ public class CourseController {
         courseRepository.deleteById(id);
         return "redirect:/courses/list";
     }
+    @GetMapping("")
+    public String homeRedirect() {
+        return "redirect:/courses/list";
+    }
     @GetMapping("/edit/{id}")
     public String editCourse(@PathVariable Long id, Model model) {
         Course course = courseRepository.findById(id).orElseThrow();

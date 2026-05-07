@@ -2,6 +2,8 @@ package com.school.schoolapp.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "course")
 public class Course {
@@ -13,7 +15,8 @@ public class Course {
     private String courseName;
     private String duration;
     private Double fees;
-
+    @OneToMany(mappedBy = "course")
+    private List<Student> students;
     // getters & setters
     public Long getId() {
         return id;
