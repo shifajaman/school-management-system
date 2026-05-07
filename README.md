@@ -1,32 +1,42 @@
-# School Management System
 
-A Spring Boot + PostgreSQL based web application for managing students and courses.
 
-## Features
-- Add / Edit / Delete Courses
-- Add / Edit / Delete Students
-- Course-Student management system
-- Spring Boot MVC architecture
-- PostgreSQL database integration
+# 🎓 School Management System
 
-## Tech Stack
-- Java
+A full-stack School Management System built using Spring Boot, Thymeleaf, PostgreSQL, and Bootstrap.
+
+---
+
+## 🚀 Features
+
+### 📚 Course Management
+- Add Course
+- Edit Course
+- Delete Course
+- View Course List
+
+### 👨‍🎓 Student Management
+- Add Student
+- Edit Student
+- Delete Student
+- View Student List
+- Assign Students to Courses
+
+---
+
+## 🛠 Tech Stack
+
+- Java 17
 - Spring Boot
 - Spring MVC
 - Spring Data JPA
 - PostgreSQL
-- HTML (Thymeleaf)
+- Thymeleaf
+- Bootstrap 5
+- Maven
+- Git & GitHub
 
-## How to Run
-1. Create database `schooldb`
-2. Update application.properties
-3. Run:
-   mvn spring-boot:run
+---
 
-## Author
-Shifa Banu
-
-## 📸 Screenshots
 
 ### Home Page
 ![Home](src/main/resources/static/images/home.png)
@@ -36,3 +46,22 @@ Shifa Banu
 
 ### Add Student
 ![Student](src/main/resources/static/images/student.png)
+
+### 🏠 Dashboard
+
+![Dashboard](src/main/resources/static/images/home.png)
+
+---
+
+### 📚 Course Management
+
+![Courses](src/main/resources/static/images/course.png)
+
+---
+
+## ▶️ Run Project
+
+### Clone Repository
+
+```bash
+git clone git@github.com:shifajaman/school-management-system.git
