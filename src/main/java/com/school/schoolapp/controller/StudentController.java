@@ -30,11 +30,8 @@ public class StudentController {
     public String saveStudent(@ModelAttribute Student student,
                               @RequestParam Long courseId) {
 
-        Course course = courseRepository.findById(courseId)
-                .orElseThrow();
-
+        Course course = courseRepository.findById(courseId).orElseThrow();
         student.setCourse(course);
-
         studentRepository.save(student);
 
         return "redirect:/students/list";
@@ -44,5 +41,10 @@ public class StudentController {
     public String listStudents(Model model) {
         model.addAttribute("students", studentRepository.findAll());
         return "students";
+    }
+    @GetMapping("/delete/{id}")
+    public String deleteStudent(@PathVariable Long id) {
+        studentRepository.deleteById(id);
+        return "redirect:/students/list";
     }
 }

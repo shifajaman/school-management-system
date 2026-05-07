@@ -16,7 +16,7 @@ public class HomeController {
     @Autowired
     private CourseRepository courseRepository;
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String home(Model model) {
 
         model.addAttribute("studentCount",
